@@ -21,6 +21,7 @@ import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -82,7 +83,7 @@ public class validatorControllerTest {
     public void saveNonExistingRestrictedWord() throws Exception {
         when(restrictedWordService.findByName("killer")).thenReturn(null);
 
-        mockMvc.perform(get("/rest/save-restricted-word/killer"))
+        mockMvc.perform(post("/rest/save-restricted-word/killer"))
                 //.andDo(print())
                 .andExpect(status().isOk());
 
@@ -98,7 +99,7 @@ public class validatorControllerTest {
 
         when(restrictedWordService.findByName("abuse")).thenReturn(restrictedWord);
 
-        mockMvc.perform(get("/rest/save-restricted-word/abuse"))
+        mockMvc.perform(post("/rest/save-restricted-word/abuse"))
                 //.andDo(print())
                 .andExpect(jsonPath("$.restrictedWord", is("abuse")))
                 .andExpect(status().isFound());
@@ -108,7 +109,7 @@ public class validatorControllerTest {
     @Test
     public void saveNonValidRestrictedWord() throws Exception {
 
-        mockMvc.perform(get("/rest/save-restricted-word/abuse111"))
+        mockMvc.perform(post("/rest/save-restricted-word/abuse111"))
                 //.andDo(print())
                 .andExpect(status().isNotAcceptable());
 
