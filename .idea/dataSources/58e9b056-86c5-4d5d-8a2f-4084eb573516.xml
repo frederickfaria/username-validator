@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12407</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-02-19.14:02:20.150</IntrospectionTimestamp>
+      <IntrospectionStateNumber>630</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12119</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="hibernate_sequence">
+      <ObjectId>16497</ObjectId>
+      <StateNumber>624</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="10" parent="3" name="restrictedword">
+      <ObjectId>16499</ObjectId>
+      <StateNumber>625</StateNumber>
+    </table>
+    <table id="11" parent="3" name="username">
+      <ObjectId>16504</ObjectId>
+      <StateNumber>626</StateNumber>
+    </table>
+    <column id="12" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>625</StateNumber>
+    </column>
+    <column id="13" parent="10" name="restrictedword">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>625</StateNumber>
+    </column>
+    <index id="14" parent="10" name="restrictedword_pkey">
+      <ObjectId>16502</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="15" parent="10" name="uk_nhpt8m959djkkot0m175ibqgb">
+      <ObjectId>16510</ObjectId>
+      <ColNames>restrictedword</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="16" parent="10" name="idxnhpt8m959djkkot0m175ibqgb">
+      <ObjectId>16509</ObjectId>
+      <ColNames>restrictedword</ColNames>
+    </index>
+    <key id="17" parent="10" name="restrictedword_pkey">
+      <ObjectId>16503</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>restrictedword_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="18" parent="10" name="uk_nhpt8m959djkkot0m175ibqgb">
+      <ObjectId>16511</ObjectId>
+      <ColNames>restrictedword</ColNames>
+      <UnderlyingIndexName>uk_nhpt8m959djkkot0m175ibqgb</UnderlyingIndexName>
+    </key>
+    <column id="19" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>626</StateNumber>
+    </column>
+    <column id="20" parent="11" name="username">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>626</StateNumber>
+    </column>
+    <index id="21" parent="11" name="username_pkey">
+      <ObjectId>16507</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="22" parent="11" name="uk_gcp4496emdeomt5ka1bhaio9t">
+      <ObjectId>16513</ObjectId>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="23" parent="11" name="idxgcp4496emdeomt5ka1bhaio9t">
+      <ObjectId>16512</ObjectId>
+      <ColNames>username</ColNames>
+    </index>
+    <key id="24" parent="11" name="username_pkey">
+      <ObjectId>16508</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>username_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="25" parent="11" name="uk_gcp4496emdeomt5ka1bhaio9t">
+      <ObjectId>16514</ObjectId>
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>uk_gcp4496emdeomt5ka1bhaio9t</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

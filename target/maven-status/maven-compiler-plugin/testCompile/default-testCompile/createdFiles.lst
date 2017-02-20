@@ -1,0 +1,3 @@
+validator/core/services/impl/UsernameServiceImplTest.class
+validator/mvc/rest/validatorControllerTest.class
+core/repositories/JpaRepositoriesTest.class
