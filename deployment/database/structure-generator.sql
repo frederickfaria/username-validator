@@ -1,0 +1,10 @@
+drop table if exists RestrictedWord cascade;
+drop table if exists Username cascade;
+drop sequence if exists hibernate_sequence;
+create sequence hibernate_sequence start 1 increment 1;
+create table RestrictedWord (id int8 not null, restrictedWord varchar(255), primary key (id));
+create table Username (id int8 not null, username varchar(255), primary key (id));
+create index IDXnhpt8m959djkkot0m175ibqgb on RestrictedWord (restrictedWord);
+alter table RestrictedWord add constraint UK_nhpt8m959djkkot0m175ibqgb unique (restrictedWord);
+create index IDXgcp4496emdeomt5ka1bhaio9t on Username (username);
+alter table Username add constraint UK_gcp4496emdeomt5ka1bhaio9t unique (username);

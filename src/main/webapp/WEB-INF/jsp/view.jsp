@@ -46,7 +46,7 @@
 <body ng-app="myApp" class="ng-cloak">
 <div class="generic-container" ng-controller="ValidatorController as ctrl">
     <div class="panel panel-default">
-        <div class="panel-heading"><span class="lead">Restricted words module</span></div>
+        <div class="panel-heading"><span class="lead">Restricted Words Module</span></div>
         <div class="formcontainer">
             <form>
                 <div class="form-group">
@@ -66,7 +66,7 @@
     </div>
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><span class="lead">Username Validation</span></div>
+        <div class="panel-heading"><span class="lead">Username Validation Module</span></div>
         <div class="formcontainer">
             <form>
                 <div class="form-group">

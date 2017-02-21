@@ -47,13 +47,7 @@ public class UsernameServiceImpl implements UsernameService {
     @Override
     public void validateExistingUsername(String username) throws UsernameExistsException, RestrictedWordException {
 
-        // Searching if the username exists in database
-        Username existingUsername = this.usernameRepository.findByName(username);
-
-        if (existingUsername != null) {
-            // User name exists
-            throw new UsernameExistsException();
-        }
+        validateUsername(username);
 
         // Searching if is an restricted word
         if (this.restrictedWordRepository.containsRestrictedWord(username)) {
@@ -88,11 +82,11 @@ public class UsernameServiceImpl implements UsernameService {
 
             try {
                 suggestedUsernameNumeric = username + String.format("%04d", generateRandomNumber());
-                validateExistingUsername(suggestedUsernameNumeric);
+                validateUsername(suggestedUsernameNumeric);
                 if (suggestionList.contains(suggestedUsernameNumeric)) {
                     throw new UsernameExistsException();
                 }
-            } catch (UsernameExistsException | RestrictedWordException e) {
+            } catch (UsernameExistsException e) {
                 i--;
                 continue;
             }
@@ -119,5 +113,15 @@ public class UsernameServiceImpl implements UsernameService {
 
     protected int generateRandomNumber() {
         return rand.nextInt(10000);
+    }
+
+    private void validateUsername(String username) throws UsernameExistsException {
+        // Searching if the username exists in database
+        Username existingUsername = this.usernameRepository.findByName(username);
+
+        if (existingUsername != null) {
+            // User name exists
+            throw new UsernameExistsException();
+        }
     }
 }

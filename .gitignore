@@ -4,6 +4,7 @@
 .idea/dictionaries
 .idea/
 *.iml
+.DS_Store
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
