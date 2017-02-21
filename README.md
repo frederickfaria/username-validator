@@ -1,4 +1,4 @@
-# username-validator
+# Username Validator
 Full stack web applicaton, Implemented to lean about Spring MVC, Rest Services, AngularJS
 
 # For deploy it
