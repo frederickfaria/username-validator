@@ -1,9 +1,9 @@
 # username-validator
 Full stack web applicaton, Implemented to lean about Spring MVC, Rest Services, AngularJS
 
-For deploy it:
+# For deploy it
 
-For easy deployment I created a docker container shared in my docker hub account, for deploy locally with docker and debian based OS please execute the following commands:
+For deploy locally with docker and debian based OS please execute the following commands:
 
 # Deploying the database
 
@@ -15,7 +15,7 @@ For easy deployment I created a docker container shared in my docker hub account
 
 This will create the database and insert 456 rows in restrictedword table and 269558 rows in username table for performance testing.
 
-# Deploying the application:
+# Deploying the application
 
 1.- cd validator/deployment/server/
 
